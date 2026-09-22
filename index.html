@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos Recursivos Premium</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Menu -->
+        <nav class="sidebar glass-panel">
+            <div class="sidebar-header">
+                <div class="accent-dot"></div>
+                <h2>ALGORITMOS</h2>
+            </div>
+            <ul class="nav-links">
+                <li><button class="nav-btn" data-route="factorial">Factorial</button></li>
+                <li><button class="nav-btn" data-route="fibonacci">Fibonacci</button></li>
+                <li><button class="nav-btn" data-route="mcd">Máximo Común Divisor</button></li>
+                <li><button class="nav-btn" data-route="cambio">Cambio de Moneda</button></li>
+                <li><button class="nav-btn" data-route="hanoi">Torres de Hanói</button></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div id="view-container" class="view-container">
+                <!-- Vistas dinámicas se inyectarán aquí por el Router -->
+                <div class="welcome-message slide-in">
+                    <h1>Ejercicios Recursivos</h1>
+                    <p>Selecciona un algoritmo en el menú lateral para comenzar.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Usamos 'module' para soportar ES6 import/export -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
