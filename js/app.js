@@ -5,7 +5,34 @@ import { McdController } from './controllers/McdController.js';
 import { CambioMonedaController } from './controllers/CambioMonedaController.js';
 import { TorresHanoiController } from './controllers/TorresHanoiController.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+const initApp = () => {
+    // Animación de la sección Hero con GSAP (Estilo After Effects)
+    if (typeof gsap !== 'undefined') {
+        gsap.fromTo('.hero-anim', 
+            { 
+                y: 60, 
+                autoAlpha: 0 
+            },
+            { 
+                y: 0, 
+                autoAlpha: 1, 
+                duration: 1.4, 
+                stagger: 0.25, 
+                ease: 'power4.out', // Curva de easing fluida con rápida entrada y suave salida
+                delay: 0.2
+            }
+        );
+    }
+
+    // Configurar el botón de CTA del Hero
+    const startBtn = document.getElementById('start-btn');
+    if (startBtn) {
+        startBtn.addEventListener('click', () => {
+            const firstNavBtn = document.querySelector('.nav-btn');
+            if (firstNavBtn) firstNavBtn.click();
+        });
+    }
+
     // 1. Inicializar el Router principal
     const router = new Router('view-container');
 
@@ -31,4 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
             router.navigate(route);
         });
     });
-});
+};
+
+// Asegurar que la inicialización se ejecute correctamente en módulos ES6
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}

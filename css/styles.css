@@ -116,18 +116,38 @@ body {
     justify-content: center;
 }
 
-/* Animations */
-.slide-in {
-    animation: slideIn 0.8s cubic-bezier(0.25, 1, 0.25, 1) forwards;
-    opacity: 0;
-    transform: translateY(30px);
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    height: 100%;
 }
 
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+}
+
+.hero-anim {
+    /* Estado inicial para la animación de GSAP */
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Common View Styles */
