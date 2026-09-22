@@ -7,16 +7,13 @@ Esta es una aplicación web interactiva desarrollada con HTML, CSS y JavaScript 
 Dado que el proyecto utiliza módulos de JavaScript (`import` / `export`), es necesario ejecutarlo a través de un servidor local HTTP para evitar errores de políticas de CORS (Cross-Origin Resource Sharing) en el navegador.
 
 1. **Abre una terminal** en el directorio raíz del proyecto.
-2. Puedes usar herramientas como `npx` (Node.js) o Python para levantar un servidor:
-   - **Usando Node.js:**
-     ```bash
-     npx http-server ./ -p 8080
-     ```
-   - **Usando Python:**
-     ```bash
-     python -m http.server 8080
-     ```
-3. Abre tu navegador web y entra a `http://localhost:8080/`.
+2. Ejecuta el servidor local incluido usando Node.js:
+   ```bash
+   node server.js
+   ```
+3. Abre tu navegador web y entra a `http://localhost:3000/`.
+
+*(Si no tienes Node.js, alternativamente puedes usar Python: `python -m http.server 3000` y entrar a ese puerto).*
 
 ---
 
